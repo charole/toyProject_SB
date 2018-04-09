@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function cod(){
+        //$("#cd").val("asd");
+              swal({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.value) {
+          swal(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
+      }
+      </script>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div id="calendar"></div>
+    <input type="button" value="ascsc" onclick="cod()">
+    <input type="text" name="cc" id="cd" value="0">
+
+
+  </body>
+</html>
